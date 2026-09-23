@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inspiration&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nobile&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-body: "Nobile", sans-serif;
+  --font-display: "Inspiration", cursive;
+  --font-ui: "Noto Sans", sans-serif;
+  --tracking-wedding-title: 0.8rem;
+  --tracking-wedding-scroll: 0.3rem;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@utility animate-scroll {
+  animation: scroll 0.95s ease-in-out alternate infinite;
+}
