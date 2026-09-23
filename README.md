@@ -1,4 +1,4 @@
-# Erny & Yessica — invitación de boda
+# Invitación de boda
 
 Invitación de boda migrada a Next.js 16 con App Router, Tailwind CSS 4 y GSAP.
 Cada sección vive en su propio componente para que el contenido y el diseño se
