@@ -1,10 +1,12 @@
 "use client";
 
 import { useRef, type ReactNode } from "react";
-import { ArrowDown, ArrowUpRight, MapPin, Video } from "lucide-react";
+import { ArrowDown, ArrowUpRight, MapPin, MessageCircle, Video } from "lucide-react";
 import { useV2Animations } from "@/components/invitation-v2/use-v2-animations";
 import { HeroDecorationScene } from "./hero-decoration-scene";
 import { WeddingCountdown } from "./wedding-countdown";
+import { DressCodeSection } from "./dress-code-section";
+import { ReceptionDirectionsVideo } from "./reception-directions-video";
 import styles from "@/components/invitation-v2/wedding-invitation-v2.module.css";
 
 function AnimatedTitle({
@@ -170,19 +172,18 @@ export function WeddingInvitationV2() {
         data-v2-section
       >
         <div className={styles.locationGrid}>
-          <div className={styles.mapCard} data-v2-reveal aria-hidden="true">
-            <span className={styles.roadOne} />
-            <span className={styles.roadTwo} />
-            <span className={styles.roadThree} />
-            <span className={styles.mapPin}>
-              <i />
-            </span>
-            <span className={styles.mapLabel}>PIRINEOS</span>
+          <div className={styles.mapCard} data-v2-reveal>
+            <iframe
+              className={styles.embeddedMap}
+              title="Mapa de la ubicación de los consejos bíblicos"
+              src="https://www.google.com/maps?q=10.9963072,-74.7940177&z=17&hl=es&output=embed"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
           <div className={styles.locationCopy}>
-            <AnimatedTitle>
-              Acompáñanos en los consejos bíblicos
-            </AnimatedTitle>
+            <AnimatedTitle>Acompáñanos en los consejos bíblicos</AnimatedTitle>
             <div className={styles.address} data-v2-reveal>
               <Icon>
                 <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -192,13 +193,13 @@ export function WeddingInvitationV2() {
               </Icon>
               <div>
                 <strong>Salón del Reino de los Testigos de Jehová</strong>
-                <p>Vereda 4 No. 3-41, Barrio Sucre Parte Alta · Pirineos</p>
+                <p>Congregación El Prado, Calle 64 #58-59</p>
               </div>
             </div>
             <div className={styles.locationActions}>
               <a
                 className={styles.outlineButton}
-                href="https://maps.google.com"
+                href="https://maps.app.goo.gl/3DgzaExhwnoBzoUk6"
                 target="_blank"
                 rel="noreferrer"
                 data-v2-reveal
@@ -232,14 +233,15 @@ export function WeddingInvitationV2() {
           data-v2-float
         />
         <div className={styles.locationGrid}>
-          <div className={styles.mapCard} data-v2-reveal aria-hidden="true">
-            <span className={styles.roadOne} />
-            <span className={styles.roadTwo} />
-            <span className={styles.roadThree} />
-            <span className={styles.mapPin}>
-              <i />
-            </span>
-            <span className={styles.mapLabel}>RECEPCIÓN</span>
+          <div className={styles.mapCard} data-v2-reveal>
+            <iframe
+              className={styles.embeddedMap}
+              title="Mapa de la recepción en casa campestre el Refugio"
+              src="https://www.google.com/maps?q=10.814099,-74.7932716&z=17&hl=es&output=embed"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
           <div className={styles.locationCopy}>
             <AnimatedTitle>Recepción</AnimatedTitle>
@@ -248,22 +250,31 @@ export function WeddingInvitationV2() {
                 <MapPin size={20} aria-hidden="true" />
               </Icon>
               <div>
-                <strong>Lugar de la recepción</strong>
-                <p>Ubicación por confirmar</p>
+                <strong>Casa campestre el “Refugio”</strong>
+                <p>
+                  Carretera a Pital de Carlin, Km 3 + 800 mts.
+                  <br />
+                  Sabanagrande (Atl). Parcela 16, etapa 3.
+                </p>
+                <p>
+                  Hora: <time dateTime="18:30">6:30 PM</time>
+                </p>
               </div>
             </div>
-            <div className={`${styles.locationActions} ${styles.receptionActions}`}>
-              {/* Activar como enlace cuando se confirme la ubicación. */}
-              <button
+            <div
+              className={`${styles.locationActions} ${styles.receptionActions}`}
+            >
+              <a
                 className={styles.outlineButton}
-                type="button"
-                disabled
-                title="Ubicación de la recepción por confirmar"
+                href="https://maps.app.goo.gl/6E9MDvxygCs8Q8Xw5"
+                target="_blank"
+                rel="noreferrer"
                 data-v2-reveal
               >
                 <span>Abrir ubicación</span>
                 <ArrowUpRight size={18} strokeWidth={1.6} aria-hidden="true" />
-              </button>
+              </a>
+              <ReceptionDirectionsVideo buttonClassName={styles.outlineButton} />
             </div>
           </div>
         </div>
@@ -280,32 +291,40 @@ export function WeddingInvitationV2() {
         </div>
       </section>
 
+      <DressCodeSection className={styles.section} />
+
       <section
         className={`${styles.section} ${styles.giftsSection}`}
         id="regalos"
         data-v2-section
       >
-        <div className={styles.giftPanel}>
-          <div>
-            <p className={styles.kicker} data-v2-reveal>
-              Un detalle de corazón
-            </p>
-            <AnimatedTitle>
-              Lo más importante es compartir contigo
-            </AnimatedTitle>
-          </div>
-          <div className={styles.giftCopy}>
-            <p data-v2-reveal>
-              Si deseas apoyarnos en nuestro nuevo proyecto de vida, puedes
-              escribirnos. Lo recibiremos con infinito cariño.
-            </p>
-            <a
-              className={styles.primaryButton}
-              href="mailto:contacto@ejemplo.com"
-              data-v2-reveal
-            >
-              Escribir a los novios <span aria-hidden="true">→</span>
-            </a>
+        <div className={styles.announcementsContent}>
+          <p className={styles.importantLabel} data-v2-reveal>IMPORTANTE</p>
+          <div className={styles.announcementsGrid}>
+            <div className={styles.announcement}>
+              <h2 data-v2-reveal>No niños</h2>
+              <p data-v2-reveal>
+                Una noche para celebrar, compartir y disfrutar juntos. En esta
+                ocasión, nuestra celebración será exclusivamente para adultos.
+              </p>
+            </div>
+            <div className={styles.announcement}>
+              <h2 data-v2-reveal>Confirmación de asistencia</h2>
+              <p data-v2-reveal>
+                Tu confirmación nos ayudará a preparar cada detalle de este día
+                tan especial
+              </p>
+              <a
+                className={`${styles.primaryButton} ${styles.rsvpButton}`}
+                href={`https://wa.me/573057845572?text=${encodeURIComponent("Hola, la familia ___ confirma asistencia")}`}
+                target="_blank"
+                rel="noreferrer"
+                data-v2-reveal
+              >
+                <span>Confirma tu asistencia aquí</span>
+                <MessageCircle size={18} strokeWidth={1.6} aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -315,7 +334,15 @@ export function WeddingInvitationV2() {
         <div className={styles.footerNames} data-v2-reveal>
           Jean Carlos <span>&amp;</span> Melissa
         </div>
-        <p data-v2-reveal>Jean Carlos González y Melissa Escobar</p>
+        <img
+          className={styles.footerLogo}
+          src="/assets/v2/monogram-jm-gold.png"
+          alt="Sello dorado con el monograma J y M de Jean Carlos y Melissa"
+          width={1254}
+          height={1254}
+          loading="lazy"
+          data-v2-reveal
+        />
         <p data-v2-reveal>06 · NOVIEMBRE · 2026</p>
       </footer>
     </main>
