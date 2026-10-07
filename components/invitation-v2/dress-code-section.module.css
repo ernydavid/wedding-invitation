@@ -45,12 +45,6 @@
 .notice { margin-top: 40px; }
 .notice h3 { display: inline-block; margin: 0 0 20px; padding: 7px 24px; border-radius: 14px; background: #eaded6; color: var(--brown); font-size: 1rem; font-weight: 400; letter-spacing: .18em; text-transform: uppercase; }
 .notice p { margin: 0; font-size: 1.1rem; line-height: 1.8; }
-.notice strong { font-weight: 700; }
-.colors { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px; max-width: 570px; margin: 36px auto 0; padding: 0; list-style: none; }
-.colors li { display: flex; flex-direction: column; align-items: center; gap: 12px; min-width: 0; }
-.colors li > span:last-child { font-size: .65rem; line-height: 1.5; letter-spacing: .04em; text-transform: uppercase; }
-.swatch { position: relative; display: block; width: 64px; aspect-ratio: 1; border: 1px solid var(--brown); border-radius: 50%; box-shadow: inset 0 0 0 4px var(--cream), inset 0 0 0 5px #a39c8b; overflow: hidden; }
-.swatch::after { content: ""; position: absolute; top: 50%; left: -5%; width: 110%; height: 1px; background: var(--brown); transform: rotate(-45deg); }
 .divider { display: flex; justify-content: center; align-items: center; gap: 14px; margin-top: 40px; color: #8c6b43; }
 .divider span { width: 56px; height: 1px; background: #ad895c; }
 
@@ -59,7 +53,6 @@
   .intro { line-height: 1.85; }
   .notice { margin-top: 48px; }
   .notice p { line-height: 1.9; }
-  .colors { margin-top: 44px; }
   .divider { margin-top: 48px; }
 }
 
@@ -74,22 +67,14 @@
   .heading { font-size: .85rem; letter-spacing: .13em; }
   .formal { font-size: 5.8rem; margin-bottom: 24px; }
   .intro { font-size: 1.05rem; }
-  .intro br, .notice br { display: none; }
+  .intro br { display: none; }
   .notice { margin-top: 40px; }
   .notice h3 { font-size: .85rem; margin-bottom: 24px; }
   .notice p { font-size: 1rem; }
-  .notice strong { display: block; margin: 8px 0; }
-  .colors { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px 16px; }
-  .colors li { flex: 0 0 calc((100% - 32px) / 3); }
-  .swatch { width: 58px; }
-  .colors li > span:last-child { font-size: .6rem; }
 }
 
 @media (max-width: 360px) {
   .card { padding-inline: 14px; }
   .heading { font-size: .76rem; }
   .formal { font-size: 5.2rem; }
-  .colors { column-gap: 12px; }
-  .colors li { flex-basis: calc((100% - 24px) / 3); }
-  .swatch { width: 52px; }
 }

@@ -1,14 +1,6 @@
 import { Heart } from "lucide-react";
 import styles from "./dress-code-section.module.css";
 
-const reservedColors = [
-  { label: "Verde", color: "#64715a" },
-  { label: "Blanco", color: "#ffffff" },
-  { label: "Beige", color: "#ddd1bf" },
-  { label: "Rosa pastel", color: "#edc9d7" },
-  { label: "Y derivados", color: "#efede7" },
-];
-
 function BotanicalBranch({ className }: { className: string }) {
   return (
     <svg className={className} viewBox="0 0 140 160" fill="none" aria-hidden="true">
@@ -56,19 +48,11 @@ export function DressCodeSection({ className }: { className: string }) {
         <div className={styles.notice} data-v2-reveal>
           <h3>Importante:</h3>
           <p>
-            Para mantener la armonía de nuestra celebración, <br />
-            <strong>no se utilizará ningún color verde, <br />ni blanco o sus derivados</strong> <br />
-            (como beige, rosa pastel, etc.).
+            Para mantener la armonía de nuestra celebración, agradecemos elegir
+            un vestuario apropiado para la ocasión, evitando escotes, vestidos
+            muy cortos o aberturas pronunciadas.
           </p>
         </div>
-        <ul className={styles.colors} aria-label="Colores que no se utilizarán en la vestimenta" data-v2-reveal>
-          {reservedColors.map(({ label, color }) => (
-            <li key={label}>
-              <span className={styles.swatch} style={{ backgroundColor: color }} aria-hidden="true" />
-              <span>{label}</span>
-            </li>
-          ))}
-        </ul>
         <div className={styles.divider} aria-hidden="true" data-v2-reveal>
           <span /><Heart size={12} fill="currentColor" /><span />
         </div>
