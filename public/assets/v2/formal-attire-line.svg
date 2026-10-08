@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none" stroke="#8c6b43" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Tuxedo: separate sleeve, lapel, shirt and jacket seams. -->
+  <path d="M65 32L43 42Q36 45 33 57L17 151L37 155L49 94L45 184Q64 190 88 180Q112 190 131 184L127 94L139 155L159 151L143 57Q140 45 133 42L111 32"/>
+  <path d="M65 32L88 104L111 32"/>
+  <path d="M65 32L55 59L69 68L61 79L88 116L115 79L107 68L121 59L111 32"/>
+  <path d="M75 32L88 43L101 32M88 57V96M88 116V180"/>
+  <path d="M76 43L86 47V53L76 57ZM100 43L90 47V53L100 57Z"/>
+  <rect x="86" y="47" width="4" height="6" rx="1"/>
+  <circle cx="88" cy="71" r="1" fill="#8c6b43" stroke="none"/>
+  <circle cx="88" cy="84" r="1" fill="#8c6b43" stroke="none"/>
+  <circle cx="93" cy="132" r="1.5"/>
+  <circle cx="93" cy="149" r="1.5"/>
+  <path d="M53 135H72M104 135H123M108 89H121M19 143L38 147M138 147L157 143"/>
+  <!-- Long gown: symmetrical straps, a continuous waist and flowing skirt. -->
+  <path d="M212 32L202 38L205 57Q209 73 219 86L215 107Q209 133 198 154Q185 182 177 199Q233 214 289 199Q281 182 268 154Q257 133 251 107L247 86Q257 73 261 57L264 38L254 32"/>
+  <path d="M212 32L216 50Q233 65 250 50L254 32"/>
+  <path d="M219 86Q233 91 247 86M216 101Q233 106 250 101"/>
+  <path d="M223 112Q218 158 203 197M233 114V201M243 112Q248 158 263 197" stroke-width="1.3"/>
+</svg>

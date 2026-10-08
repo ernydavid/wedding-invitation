@@ -36,7 +36,7 @@
   color: #8c6b43;
 }
 
-.attire svg { width: 170px; height: auto; }
+.attire img { display: block; width: 170px; max-width: 100%; height: auto; }
 .attire > span { width: 56px; height: 1px; background: #ad895c; }
 .heart { margin: 12px auto 24px; color: #8c6b43; }
 .heading { margin: 0; font-size: clamp(1rem, 2vw, 1.5rem); font-weight: 400; letter-spacing: .18em; text-transform: uppercase; line-height: 1.6; }
@@ -62,7 +62,7 @@
   .branchTop { top: -20px; left: -18px; }
   .branchBottom { bottom: -20px; right: -18px; }
   .attire { gap: 12px; }
-  .attire svg { width: 136px; }
+  .attire img { width: 136px; }
   .attire > span { width: 30px; }
   .heading { font-size: .85rem; letter-spacing: .13em; }
   .formal { font-size: 5.8rem; margin-bottom: 24px; }

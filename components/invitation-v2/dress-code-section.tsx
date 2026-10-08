@@ -15,18 +15,6 @@ function BotanicalBranch({ className }: { className: string }) {
   );
 }
 
-function FormalAttire() {
-  return (
-    <svg viewBox="0 0 220 150" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <path d="m43 24-20 9-9 87 17 2 8-62-3 78h31l6-13 6 13h30l-3-78 8 62 17-2-9-87-20-9-13 51-15-51Z" />
-      <path d="m43 24 12 25-9 7 27 45 26-45-9-7 12-25M73 76v49M62 24l11 6 11-6v13l-11-6-11 6Z" />
-      <path d="M73 51v1m0 9v1M41 101h15m34 0h14" />
-      <path d="m150 25 14 11 14-11 8 8-13 32 8 28 22 45h-68l22-45 8-28-13-32Z" />
-      <path d="M157 65h16m-16 28h24" />
-    </svg>
-  );
-}
-
 export function DressCodeSection({ className }: { className: string }) {
   return (
     <section className={`${className} ${styles.section}`} id="vestimenta" aria-labelledby="dress-code-title" data-v2-section>
@@ -35,7 +23,13 @@ export function DressCodeSection({ className }: { className: string }) {
         <BotanicalBranch className={styles.branchBottom} />
         <div className={styles.attire} data-v2-reveal>
           <span />
-          <FormalAttire />
+          <img
+            src="/assets/v2/formal-attire-line.svg"
+            alt="Ilustración de un esmoquin y un vestido largo de gala en líneas doradas"
+            width={320}
+            height={220}
+            loading="lazy"
+          />
           <span />
         </div>
         <Heart className={styles.heart} size={12} fill="currentColor" aria-hidden="true" data-v2-reveal />
