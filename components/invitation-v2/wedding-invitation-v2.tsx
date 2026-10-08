@@ -1,7 +1,13 @@
 "use client";
 
 import { useRef, type ReactNode } from "react";
-import { ArrowDown, ArrowUpRight, MapPin, MessageCircle, Video } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowUpRight,
+  MapPin,
+  MessageCircle,
+  Video,
+} from "lucide-react";
 import { useV2Animations } from "@/components/invitation-v2/use-v2-animations";
 import { HeroDecorationScene } from "./hero-decoration-scene";
 import { WeddingCountdown } from "./wedding-countdown";
@@ -78,15 +84,10 @@ export function WeddingInvitationV2() {
         </div>
 
         <div className={styles.heroReveal} data-v2-hero-reveal>
-          <div className={styles.heroMessage}>
-            Con mucha ilusión queremos compartir
-            <br />
-            contigo este día tan especial, en el que
-            <br />
-            comenzaremos juntos una nueva etapa de
-            <br />
-            nuestras vidas.
-          </div>
+          <p className={styles.heroMessage}>
+            Con mucha ilusión queremos compartir contigo este día tan especial,
+            en el que comenzaremos juntos una nueva etapa de nuestras vidas.
+          </p>
         </div>
 
         <div
@@ -274,7 +275,9 @@ export function WeddingInvitationV2() {
                 <span>Abrir ubicación</span>
                 <ArrowUpRight size={18} strokeWidth={1.6} aria-hidden="true" />
               </a>
-              <ReceptionDirectionsVideo buttonClassName={styles.outlineButton} />
+              <ReceptionDirectionsVideo
+                buttonClassName={styles.outlineButton}
+              />
             </div>
           </div>
         </div>
@@ -299,14 +302,18 @@ export function WeddingInvitationV2() {
         data-v2-section
       >
         <div className={styles.announcementsContent}>
-          <p className={styles.importantLabel} data-v2-reveal>IMPORTANTE</p>
+          <p className={styles.importantLabel} data-v2-reveal>
+            IMPORTANTE
+          </p>
           <div className={styles.announcementsGrid}>
-            <div className={styles.announcement}>
-              <h2 data-v2-reveal>No niños</h2>
-              <p data-v2-reveal>
-                Una noche para celebrar, compartir y disfrutar juntos. En esta
-                ocasión, nuestra celebración será exclusivamente para adultos.
-              </p>
+            <div className={styles.rsvpArt} data-v2-reveal>
+              <img
+                src="/assets/v2/rsvp-line.svg"
+                alt="Invitación con un corazón y un sello de confirmación de asistencia"
+                width={420}
+                height={360}
+                loading="lazy"
+              />
             </div>
             <div className={styles.announcement}>
               <h2 data-v2-reveal>Confirmación de asistencia</h2>
