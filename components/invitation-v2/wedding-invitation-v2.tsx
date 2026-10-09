@@ -208,17 +208,16 @@ export function WeddingInvitationV2() {
                 <span>Abrir ubicación</span>
                 <ArrowUpRight size={18} strokeWidth={1.6} aria-hidden="true" />
               </a>
-              {/* Activar como enlace cuando se disponga de la URL de Zoom. */}
-              <button
+              <a
                 className={styles.outlineButton}
-                type="button"
-                disabled
-                title="Enlace de Zoom próximamente"
+                href="https://us06web.zoom.us/j/5493072810?pwd=YvgIi9oMG9j2Dm8H9P3pVzfPOara3N.1"
+                target="_blank"
+                rel="noreferrer"
                 data-v2-reveal
               >
                 <span>Unirse por Zoom</span>
                 <Video size={18} strokeWidth={1.6} aria-hidden="true" />
-              </button>
+              </a>
             </div>
           </div>
         </div>
